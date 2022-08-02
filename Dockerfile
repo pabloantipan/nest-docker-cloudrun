@@ -4,8 +4,6 @@ WORKDIR "/app"
 
 COPY . .
 
-EXPOSE 3000
-
 RUN npm ci
 
 RUN npm run build
@@ -20,3 +18,5 @@ COPY --from=builder /app/package-lock.json ./package-lock.json
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
 CMD [ "sh", "-c", "npm run start:prod"]
+
+EXPOSE 3000

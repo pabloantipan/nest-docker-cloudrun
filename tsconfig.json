@@ -16,6 +16,20 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@config/*": ["src/config/*"],
+      "@database/*": ["src/database/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@pipes/*": ["src/pipes/*"],
+      "@providers/*": ["src/providers/*"],
+      "@services/*": ["src/services/*"],
+      "@util/*": ["src/util/*"],
+      "@guards/*": ["src/guards/*"],
+      "@whatsapp/*": ["src/whatsapp/*"],
+      "@mocks/*": ["src/mocks/*"]
+    }
   }
 }
