@@ -1,7 +1,8 @@
 {
   "cSpell.words": [
     "cloudrun",
-    "nestjs"
+    "nestjs",
+    "typeorm"
   ],
   "editor.tabSize": 2,
 
