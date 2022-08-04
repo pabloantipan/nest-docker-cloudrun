@@ -21,7 +21,7 @@
       "@api/*": ["src/api/*"],
       "@config/*": ["src/config/*"],
       "@repositories/*": ["src/repositories/*"],
-      "@database/*": ["src/database/*"],
+      "@storage/*": ["src/storage/*"],
       "@infrastructure/*": ["src/infrastructure/*"],
       "@middlewares/*": ["src/middlewares/*"],
       "@pipes/*": ["src/pipes/*"],

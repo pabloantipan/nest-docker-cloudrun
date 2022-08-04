@@ -2,12 +2,12 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesModule } from './messages/messages.module';
-import { MessagesController } from './api/messages/messages.controller';
-import { MessagesService } from './services/messages/messages.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+// import { Message } from '@storage/message.emtity';
 
 @Module({
   imports: [MessagesModule],
-  controllers: [AppController, MessagesController],
-  providers: [AppService, MessagesService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
