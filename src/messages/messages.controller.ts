@@ -1,4 +1,4 @@
-import { CreateMessageDto } from '@api/models/message.dto';
+import { CreateMessageDto } from 'src/messages/models/message.dto';
 import {
   Controller,
   Get,

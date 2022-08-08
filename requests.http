@@ -13,3 +13,43 @@ Content-Type: application/json
 
 ### Get a particular message
 GET http://localhost:3000/messages/123123123123123
+
+### Auth sign up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "john@doe.cl",
+  "password": "doeJhon"
+}
+
+### Auth sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+{
+  "email": "john@doe.cl",
+  "password": "doeJhon"
+}
+
+###  Get an estimate for carts value
+GET http://localhost:3000/reports
+
+### Report how much a vehicle sold for
+POST http://localhost:3000/reports
+Content-Type: application/json
+{
+  "make": "",
+  "model": "",
+  "year": "",
+  "mileage": "",
+  "longitude": "",
+  "latitude": "",
+  "price": ""
+}
+
+### Approve or reject a report submited by an user
+PATCH http://localhost:3000/reports/:id
+Content-Type: application/json
+{
+  "aproved": ""
+}
