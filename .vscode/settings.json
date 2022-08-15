@@ -3,6 +3,7 @@
     "cloudrun",
     "dtos",
     "emtity",
+    "middlewares",
     "nestjs",
     "typeorm"
   ],

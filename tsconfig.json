@@ -30,7 +30,8 @@
       "@util/*": ["src/util/*"],
       "@guards/*": ["src/guards/*"],
       "@whatsapp/*": ["src/whatsapp/*"],
-      "@mocks/*": ["src/mocks/*"]
+      "@mocks/*": ["src/mocks/*"],
+      "@interceptors/*": ["src/interceptors/*"],
     }
   }
 }
