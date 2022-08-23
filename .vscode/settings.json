@@ -17,4 +17,5 @@
   // will be detected based on the file contents. Set to false to keep
   // the values you've explicitly set, above.
   "editor.detectIndentation": true,
+  "compile-hero.disable-compile-files-on-did-save-code": false,
 }

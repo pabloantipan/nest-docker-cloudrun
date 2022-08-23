@@ -8,7 +8,6 @@ import {
   Patch,
   Post,
   Query,
-  UseInterceptors,
 } from '@nestjs/common';
 import { CreateUserDto } from './models/dtos/create-user.dto';
 import { UsersService } from '@services/users/users.service';
@@ -17,6 +16,7 @@ import { Serialize } from '@interceptors/serialize.interceptor';
 import { UserDto } from './models/dtos/user.dto';
 
 @Controller('/auth')
+@Serialize(UserDto)
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
@@ -26,7 +26,6 @@ export class UsersController {
     this.usersService.create(body.email, body.password);
   }
 
-  @Serialize(UserDto)
   @Get('/:id')
   async findUseR(@Param('id') id: string) {
     console.log('handler is running');
