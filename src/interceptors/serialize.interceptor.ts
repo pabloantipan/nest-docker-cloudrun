@@ -1,5 +1,5 @@
 import {
-  UseInterceptors,
+  // UseInterceptors,
   NestInterceptor,
   ExecutionContext,
   CallHandler,
@@ -9,15 +9,14 @@ import { map } from 'rxjs';
 import { plainToClass } from 'class-transformer';
 
 export class SerializeInterceptor implements NestInterceptor {
-  intercept(context: ExecutionContext, handler: CallHandler): Observable<any> {
-    // Run something before a request is handled
-    // by the request handler
-    console.log('I am running before the handler', context);
+  constructor(private dto: any) {}
 
+  intercept(context: ExecutionContext, handler: CallHandler): Observable<any> {
     return handler.handle().pipe(
       map((data: any) => {
-        // Run something before the response in sent out
-        console.log('I am running before response us sent out', data);
+        return plainToClass(this.dto, data, {
+          excludeExtraneousValues: true,
+        });
       }),
     );
   }
