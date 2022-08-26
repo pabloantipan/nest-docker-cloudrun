@@ -5,6 +5,7 @@
     "emtity",
     "middlewares",
     "nestjs",
+    "signin",
     "typeorm"
   ],
   "editor.tabSize": 2,
