@@ -32,6 +32,7 @@
       "@whatsapp/*": ["src/whatsapp/*"],
       "@mocks/*": ["src/mocks/*"],
       "@interceptors/*": ["src/interceptors/*"],
+      "@decorators/*": ["src/decorators/*"],
     }
   }
 }
