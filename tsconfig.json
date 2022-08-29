@@ -18,21 +18,13 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@api/*": ["src/api/*"],
-      "@config/*": ["src/config/*"],
       "@repositories/*": ["src/repositories/*"],
       "@storage/*": ["src/storage/*"],
-      "@infrastructure/*": ["src/infrastructure/*"],
-      "@middlewares/*": ["src/middlewares/*"],
-      "@pipes/*": ["src/pipes/*"],
-      "@providers/*": ["src/providers/*"],
       "@services/*": ["src/services/*"],
-      "@util/*": ["src/util/*"],
       "@guards/*": ["src/guards/*"],
-      "@whatsapp/*": ["src/whatsapp/*"],
-      "@mocks/*": ["src/mocks/*"],
       "@interceptors/*": ["src/interceptors/*"],
       "@decorators/*": ["src/decorators/*"],
+      "@users/*": ["src/users/*"],
     }
   }
 }
