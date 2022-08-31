@@ -55,22 +55,20 @@ describe('AuthService', () => {
   });
 
   it('throws an error if user signs up with email that is in use', async () => {
-    mockUsersService.find = () =>
-      Promise.resolve([{ id: 1, email: 'a', password: '1' } as User]);
+    await authService.signup('asd@sdf.com', 'asdf');
     try {
       await authService.signup('asd@sdf.com', 'asdf');
     } catch (err) {}
   });
 
-  it('throws an error if signin is called with an unused email', async () => {
+  it('throws an error if signing is called with an unused email', async () => {
     try {
       await authService.signin('asdasd@asdas.com', 'saadfsdf');
     } catch (err) {}
   });
 
   it('throws if an invalid password is provided', async () => {
-    mockUsersService.find = () =>
-      Promise.resolve([{ email: 'asd@asd.com', password: 'qwesdag' } as User]);
+    await authService.signup('sadfa@dsfg.com', '234rfdasd');
     try {
       await authService.signin('sadfa@dsfg.com', '234rfd');
     } catch (error) {}
