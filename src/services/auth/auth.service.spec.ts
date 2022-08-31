@@ -1,6 +1,5 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
 import { AuthService } from './auth.service';
-import { AuthGuard } from '@guards/auth.guard';
 import { UsersService } from '@services/users/users.service';
 import { User } from '@users/models/user.entity';
 
