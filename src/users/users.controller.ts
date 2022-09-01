@@ -55,7 +55,7 @@ export class UsersController {
   }
 
   @Get('/:id')
-  async findUseR(@Param('id') id: string) {
+  async findUser(@Param('id') id: string) {
     console.log('handler is running');
     const user = await this.usersService.findOne(parseInt(id));
     console.log(user);
