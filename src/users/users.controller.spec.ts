@@ -80,4 +80,15 @@ describe('UsersController', () => {
       await controller.findUser('1');
     } catch (err) {}
   });
+
+  it('signin updates session object and return user', async () => {
+    const session = { userId: -10 };
+    const user = await controller.signin(
+      { email: 'asdf@asdf.com', password: 'asdf' },
+      session,
+    );
+
+    expect(user.id).toEqual(1);
+    expect(session.userId).toEqual(1);
+  });
 });
